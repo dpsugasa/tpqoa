@@ -282,9 +282,9 @@ class tpqoa(object):
             if msg_type == 'pricing.ClientPrice':
                 self.ticks += 1
                 self.time = msg.time
-                self.on_success(msg.time,
-                                float(msg.bids[0].dict()['price']),
-                                float(msg.asks[0].dict()['price']))
+                #self.on_success(msg.time,
+                 #               float(msg.bids[0].dict()['price']),
+                  #              float(msg.asks[0].dict()['price']))
                 if stop is not None:
                     if self.ticks >= stop:
                         if ret:
